@@ -1,6 +1,7 @@
 package me.zhengjie;
 
 import me.zhengjie.common.utils.SpringContextHolder;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +15,7 @@ import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBr
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableWebSocketMessageBroker
+@MapperScan({"me.hemiao100.zhengjie.**.*.mapper"})
 public class AppRun {
 
     public static void main(String[] args) {
